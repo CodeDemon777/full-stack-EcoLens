@@ -3,7 +3,7 @@ import AppSidebar from "./AppSidebar";
 
 const DashboardLayout = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-transparent">
       <AppSidebar />
       <main className="ml-16 min-h-screen p-6 lg:p-8">
         <Outlet />
