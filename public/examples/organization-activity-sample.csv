@@ -1,0 +1,7 @@
+department,electricity_kwh,fuel_liters,transport_km,waste_kg,employee_count
+Headquarters,125000,4200,18000,7200,180
+Manufacturing Plant A,480000,18500,42000,21500,340
+Manufacturing Plant B,395000,16200,36800,19800,290
+Regional Warehouse,142000,7600,25500,9400,95
+Sales Operations,56000,2100,61000,2600,70
+Research Center,88000,1400,9200,3100,55

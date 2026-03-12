@@ -9,6 +9,7 @@ import {
   Lightbulb,
   FileText,
   FlaskConical,
+  Upload,
   LogOut,
 } from "lucide-react";
 
@@ -17,6 +18,7 @@ const navItems = [
   { icon: Factory, label: "Emissions", path: "/dashboard/emissions" },
   { icon: Layers, label: "Scope Analysis", path: "/dashboard/scope" },
   { icon: TrendingUp, label: "Predictions", path: "/dashboard/predictions" },
+  { icon: Upload, label: "Org Analyzer", path: "/dashboard/organization-analyzer" },
   { icon: Lightbulb, label: "Recommendations", path: "/dashboard/recommendations" },
   { icon: FileText, label: "Reports", path: "/dashboard/reports" },
   { icon: FlaskConical, label: "Digital Twin", path: "/dashboard/twin" },

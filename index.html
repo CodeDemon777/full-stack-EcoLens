@@ -6,19 +6,37 @@
     <!-- TODO: Set the document title to the name of your application -->
     <title>EcoLens — AI Carbon Footprint Analyzer</title>
     <meta name="description" content="AI-powered carbon footprint analyzer with real-time emissions monitoring, predictive analytics, and sustainability optimization." />
-    <meta name="author" content="" />
-
+    
     <!-- TODO: Update og:title to match your application name -->
     <meta property="og:title" content="EcoLens" />
     <meta property="og:description" content="EcoLens — AI Carbon Footprint Analyzer" />
     <meta property="og:type" content="website" />
     
-
-   
+    <!-- Remove favicon - use transparent 1x1 PNG -->
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" />
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script type="text/javascript">
+      (function (d, t) {
+        var v = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+        v.onload = function () {
+          window.voiceflow.chat.load({
+            verify: { projectID: "69b1a4a271d64659a2307c22" },
+            url: "https://general-runtime.voiceflow.com",
+            versionID: "production",
+            voice: {
+              url: "https://runtime-api.voiceflow.com",
+            },
+          });
+        };
+        v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+        v.type = "text/javascript";
+        s.parentNode.insertBefore(v, s);
+      })(document, "script");
+    </script>
   </body>
 </html>

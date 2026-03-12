@@ -1,0 +1,13 @@
+flask==3.0.3
+flask-cors==4.0.1
+scikit-learn
+xgboost
+lightgbm
+prophet
+joblib
+pandas
+numpy
+kaggle
+wbdata
+python-dotenv
+gunicorn

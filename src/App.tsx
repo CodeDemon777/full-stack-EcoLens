@@ -14,6 +14,7 @@ import Predictions from "./pages/Predictions";
 import Recommendations from "./pages/Recommendations";
 import Reports from "./pages/Reports";
 import DigitalTwin from "./pages/DigitalTwin";
+import OrganizationAnalyzer from "./pages/OrganizationAnalyzer";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="emissions" element={<Emissions />} />
             <Route path="scope" element={<ScopeAnalysis />} />
             <Route path="predictions" element={<Predictions />} />
+            <Route path="organization-analyzer" element={<OrganizationAnalyzer />} />
             <Route path="recommendations" element={<Recommendations />} />
             <Route path="reports" element={<Reports />} />
             <Route path="twin" element={<DigitalTwin />} />

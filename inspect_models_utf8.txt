@@ -1,0 +1,14 @@
+--- overall_carbon_rf_model.pkl ---
+Features: ['population', 'gdp', 'primary_energy_consumption', 'energy_per_capita', 'energy_per_gdp']
+Count: 5
+--- policy_simulation_model.pkl ---
+Features: [np.str_('population'), np.str_('gdp'), np.str_('primary_energy_consumption'), np.str_('energy_per_capita'), np.str_('energy_per_gdp')]
+Count: 5
+--- prophet_co2_model.pkl ---
+No feature_names_in_ attribute
+--- scope_anomaly_model.pkl ---
+Features: ['co2', 'energy_per_capita', 'primary_energy_consumption', 'population', 'gdp']
+Count: 5
+--- energy_intensity_model.pkl ---
+Features: ['population', 'gdp', 'primary_energy_consumption']
+Count: 3
