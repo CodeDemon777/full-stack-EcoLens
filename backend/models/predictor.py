@@ -7,8 +7,11 @@ def get_prediction(features_dict):
     model = get_model('random_forest')
     
     if model is None:
-         logger.error("Predictor called but random forest model is not loaded!")
-         raise RuntimeError("Primary model could not be loaded")
+         model = get_model('lightgbm')
+         if model is None:
+             logger.error("Predictor called but no prediction-capable model is loaded!")
+             raise RuntimeError("Primary model could not be loaded")
+         logger.warning("Random forest model unavailable. Falling back to simulation model for prediction.")
     
     # Preprocess features into a standard numerical array formatted for the model
     try:
