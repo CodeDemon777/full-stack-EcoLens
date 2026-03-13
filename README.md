@@ -78,6 +78,32 @@ For multiple origins:
 $env:CORS_ORIGINS = "https://app.example.com,https://admin.example.com"
 ```
 
+For this deployed frontend, use:
+
+```text
+CORS_ORIGINS=https://ecolensown.netlify.app
+```
+
+Do not include app routes in `CORS_ORIGINS` (for example, do not use `/dashboard/predictions`).
+
+In Netlify, set:
+
+```text
+VITE_API_BASE=https://your-backend-domain/api
+```
+
+Example:
+
+```text
+VITE_API_BASE=https://ecolens-api.onrender.com/api
+```
+
+After setting those values, redeploy the Netlify site. The backend health endpoint should respond at:
+
+```text
+https://your-backend-domain/api/health
+```
+
 ## Environment Variables
 
 - `HOST`: bind host, default `0.0.0.0`
