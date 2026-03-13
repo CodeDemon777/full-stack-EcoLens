@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from urllib.parse import urlsplit
 
 LOCAL_DEV_HOSTS = ("localhost", "127.0.0.1")
 LOCAL_DEV_PORTS = (3000, 5173, 8080, 8081)
@@ -27,11 +28,26 @@ def _get_cors_origins():
         if raw_origins == "*":
             return "*"
 
-        return [
-            origin.rstrip("/")
-            for origin in raw_origins.split(",")
-            if origin.strip()
-        ]
+        normalized_origins = []
+        seen = set()
+
+        for origin in raw_origins.split(","):
+            candidate = origin.strip().rstrip("/")
+            if not candidate:
+                continue
+
+            parsed = urlsplit(candidate)
+            # CORS accepts origins only (scheme + host + optional port), not URL paths.
+            if parsed.scheme and parsed.netloc:
+                normalized = f"{parsed.scheme}://{parsed.netloc}"
+            else:
+                normalized = candidate
+
+            if normalized not in seen:
+                seen.add(normalized)
+                normalized_origins.append(normalized)
+
+        return normalized_origins
 
     return [
         f"http://{host}:{port}"
